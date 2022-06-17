@@ -1,15 +1,17 @@
 import React from 'react'
+import '../css/grid.css'
+import ImageCard from './ImageCard'
 
 const ImageList = (props) => {
    const images= props.images.map((image)=>{
         return (
-            <img alt={image.description} key={image.id} src={image.urls.regular}/>
+            <ImageCard  key={image.id}  image={image}/>
         )
     })
     
   return (
     <div >
-    <span>{images}</span>
+    <span className='image-list'>{images}</span>
 
       
     </div>
